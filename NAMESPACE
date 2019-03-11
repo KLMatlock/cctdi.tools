@@ -2,3 +2,4 @@
 
 export(buildSet)
 importFrom(data.table,fread)
+importFrom(utils,read.table)

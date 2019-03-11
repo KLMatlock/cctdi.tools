@@ -1,18 +1,3 @@
-# Hello, world!
-#
-# This is an example function named 'hello'
-# which prints 'Hello, world!'.
-#
-# You can learn more about package authoring with RStudio at:
-#
-#   http://r-pkgs.had.co.nz/
-#
-# Some useful keyboard shortcuts for package authoring:
-#
-#   Build and Reload Package:  'Ctrl + Shift + B'
-#   Check Package:             'Ctrl + Shift + E'
-#   Test Package:              'Ctrl + Shift + T'
-
 library('data.table')
 
 #' Read Dataset
@@ -31,8 +16,8 @@ library('data.table')
 #' @return Single dataframes where each col corresponds to the readings from a single sample.
 #' @export
 #' @importFrom data.table fread
+#' @importFrom utils read.table
 #'
-#' @examples
 buildSet <- function(fpath=NULL,file_list=NULL,sample_list= NULL, read_col = "TPM",concat=TRUE){
 
   if(!is.null(fpath)){
@@ -90,7 +75,9 @@ buildSet <- function(fpath=NULL,file_list=NULL,sample_list= NULL, read_col = "TP
           }
         },
         error=function(cond) {
-          warning(paste(full_path, " is not a valid file. Skipping..."))
+          if(!is.na(full_path)){
+            warning(paste(full_path, " is not a valid file. Skipping..."))
+          }
           return(dataset)
         }
       )

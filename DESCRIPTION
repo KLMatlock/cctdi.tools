@@ -5,7 +5,7 @@ Version: 0.1.0
 Author: Kevin Matlock
 Maintainer: Kevin Matlock <kevin.matlock@cc-tdi.org>
 Description: This will compose of a number of assorted tools to assisting in reading, processing, and analyzing the datasets generated in the lab.
-License: WMIT
+License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
