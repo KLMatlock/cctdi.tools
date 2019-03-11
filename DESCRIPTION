@@ -1,0 +1,13 @@
+Package: cctdi.tools
+Type: Package
+Title: Sets of Tools to Assist the Children's Cancer Therapy Development Institute (cc-tdi)
+Version: 0.1.0
+Author: Kevin Matlock
+Maintainer: Kevin Matlock <kevin.matlock@cc-tdi.org>
+Description: This will compose of a number of assorted tools to assisting in reading, processing, and analyzing the datasets generated in the lab.
+License: WMIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports:
+    data.table
